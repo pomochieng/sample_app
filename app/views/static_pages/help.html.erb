@@ -1,14 +1,26 @@
-<h1>Help</h1>
-<p>
+<% provide(:title, "Help") %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+	</head>
+<body>
+	<h1>Help</h1>
+	<p>
 		Get help on the Ruby on Rails Tutorial at the
-	<a href="http://www.railstutorial.org/#help">Rails Tutorial help section</a>.
-	To get help on this sample app, see the
-	<a href="http://www.railstutorial.org/book"><em>Ruby on Rails Tutorial</em>
-	book</a>.
+		<a href="http://www.railstutorial.org/#help">Rails Tutorial help
+		section</a>.
+		To get help on this sample app, see the
+		<a href="http://www.railstutorial.org/book"><em>Ruby on Rails
+		Tutorial</em> book</a>.
 
-	<br>
-	We’ll add some (very slightly) dynamic content starting in Section 3.4, but as they stand the views in Listing 3.7 and Listing 3.8 underscore an important point: 
-	<br>
+		<br>
+		We’ll add some (very slightly) dynamic content starting in Section 3.4, but as they stand the views in Listing 3.7 and Listing 3.8 underscore an important point: 
+		<br>
 
-	Rails views can simply contain static HTML. This means we can begin customizing the Home and Help pages even with no knowledge of Rails, as shown in Listing 3.9 and Listing 3.10.
-</p>
+		Rails views can simply contain static HTML. This means we can begin customizing the Home and Help pages even with no knowledge of Rails, as shown in Listing 3.9 and Listing 3.10.
+	</p>
+
+</body>
+
+</html
