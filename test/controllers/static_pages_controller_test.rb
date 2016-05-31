@@ -30,5 +30,5 @@ class StaticPagesControllerTest < ActionController::TestCase
     assert_select "h2", "Other Courses"
     assert_select "h3", "Hobbies"
     assert_select "h3", "Referees"
-end
+  end
 end
