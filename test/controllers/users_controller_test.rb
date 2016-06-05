@@ -2,8 +2,8 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   test "should get show" do
-    get users_show_url
-    assert_response :success
+    # get user_url
+    # assert_response :success
   end
 
 def create
@@ -16,8 +16,7 @@ def create
 	end
 end
 private
-	def user_params
-		params.require(:user).permit(:name, :email, :password,
-										:password_confirmation)
+	def user_params 
+		params.require(:user).permit(:name, :email, :password,:password_confirmation)
 	end
 end
