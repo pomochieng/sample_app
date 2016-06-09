@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 	end
  
 	def edit
-		#@user = User.find(params[:id])
+		@user = User.find(params[:id])
 	end
 
 	def index
@@ -52,8 +52,9 @@ private
 
 	# Confirms a logged-in user.
 	def logged_in_user
+		store_location
 		unless logged_in?
-			store_location
+			
 			flash[:danger] = "Please log in."
 			redirect_to login_url
 		end
@@ -62,6 +63,6 @@ private
 	# Confirms the correct user.
 	def correct_user
 		@user = User.find(params[:id])
-		redirect_to(root_url) unless current_user?(@user)
+		redirect_to (root_url) unless current_user?(@user)
 	end
 end

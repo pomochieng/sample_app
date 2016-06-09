@@ -12,10 +12,12 @@ module SessionsHelper
 		cookies.permanent[:remember_token] = user.remember_token
 	end
 
+	def current_user?(user)
+		user = current_user
+	end
+
 	# Returns the current logged-in user (if any).
 	def current_user
-		user == current_user
-	end
 		if (user_id = session[:user_id])
 			@current_user ||= User.find_by(id: user_id)
 		elsif (user_id = cookies.signed[:user_id])
@@ -52,8 +54,7 @@ module SessionsHelper
 	end
 
 	# Stores the URL trying to be accessed.
-		def store_location
+	def store_location
 		session[:forwarding_url] = request.url if request.get?
 	end
 end
-
