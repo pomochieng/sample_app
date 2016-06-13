@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :microposts, dependent: :destroy
 	attr_accessor :remember_token
 		before_save { self.email = email.downcase }
 		validates :name, presence: true, length: { maximum: 50 }
@@ -9,11 +10,11 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }, allow_blank: true
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 	# Returns the hash digest of the given string.
-=======
+#=======
 	# Returns the hash digest of the given string. 
->>>>>>> updating-users
+#>>>>>>> updating-users
 	def User.digest(string)
 		cost = ActiveModel::SecurePassword.min_cost ? 	BCrypt::Engine::MIN_COST :
 														BCrypt::Engine.cost

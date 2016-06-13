@@ -2,17 +2,18 @@
 # FixtureSet.html# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 #Empty for now
-peter:
-<<<<<<< HEAD
-  name: peter
-  email: pomochieng@gmail.com
-  password_digest: <%= User.digest('password') %>
-=======
-  name: Peter Omondi Ochieng
-  email: pomochieng@gmail.com
+Example:
+  name: Example User
+  email: example@railstutorial.org
   password_digest: <%= User.digest('password') %>
   admin: true
 
+
+peter:
+  name: peter
+  email: pomochieng@gmail.com
+  password_digest: <%= User.digest('password') %>
+  
 
 archer:
   name: Sterling archer
@@ -35,7 +36,3 @@ user_<%= n %>:
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
 <% end %>
-
-
-
->>>>>>> updating-users
